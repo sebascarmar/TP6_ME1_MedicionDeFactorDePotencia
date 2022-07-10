@@ -1,0 +1,9 @@
+# Ignora archivos de compilación de latex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.gz
+*.toc
+*.swp
+
