@@ -7,10 +7,124 @@
     $\mathbf{I_i}$ de forma indirecta por Ley de Ohm, se coloca una atenuación \textbf{atenuación x1}
     (debido a que $R\textsubscript{1}=10\ \Omega$).
 
-    \begin{figure}[h]
+    \begin{figure}[H]
       \centering
-      \frame{\includegraphics[width=0.8\textwidth]{Imagenes/ActividadPractica/EsquemaConexiones.png}}
+      \frame{\includegraphics[width=0.7\textwidth]{Imagenes/ActividadPractica/EsquemaConexiones.png}}
       \caption{Esquema de conexiones para las mediciones.}
       \label{fig:EsquemaConexiones}
     \end{figure}
+
+    \subsubsection{Medición de los módulos de tensión y corriente de entrada}
+      En la Figura~\ref{fig:Vi_Ii} se puede ver los valores obtenidos al realizar la medición, los cuales
+      se obtienen como valores \textit{root main square} (RMS), ya que se utilizan para el cálculo de 
+      potencias. Los mediciones son:
+      
+      \begin{equation*}
+        \boxed{V_{i_{RMS}} =  213 \ [V]} \hspace{20pt} ; \hspace{20pt} \boxed{I_{i_{RMS}} = 333\ [V]}\ .
+      \end{equation*}
+      
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.4\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_1_Vin-Iin.png}}
+        \caption{Medición de tensión y corriente de entrada con el osciloscopio.}
+        \label{fig:Vi_Ii}
+      \end{figure}
   
+    \subsubsection{Medición de la diferencia de fase de la tensión y corriente de entrada}
+    A continuación, se procede a calcular la \textbf{diferencia de fase} de la tensión y corriente de entrada.
+    En la Figura~\ref{fig:DiferenciaDeFase} se aprecia la medición con el osciloscopio en modo dual y en modo X-Y.
+
+    \begin{figure}[H]
+      \centering
+      \begin{subfigure}[h]{0.4\textwidth}
+        \centering
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_2_DiferenciaDeFaseEnSegundos.png}}
+        \caption{Medición en modo dual.}
+        \label{fig:DiferenciaDeFaseEnSegundos}
+      \end{subfigure}
+      \hspace{20pt} 
+      \begin{subfigure}[h]{0.4\textwidth}
+        \centering
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_4_FiguraDeLissajous.png}}
+        \caption{Medición en modo X-Y.}
+        \label{fig:FiguraLissajous}
+      \end{subfigure}
+      \caption{Medición de diferencia de fase}
+      \label{fig:DiferenciaDeFase}
+    \end{figure}
+
+    \subsubsection*{Método 1: medición en modo dual}
+    Simplemente se procede a realizar una regla de tres simple, basándose en la Figura~\ref{fig:DesfaseEnSegundos}, mediante el
+    semiperiodo de la tensión de entrada y la diferencia en segundos entre las señales
+
+    \begin{align*}
+      9,92\ ms &\longrightarrow 180\ ^{\circ} (semiperiodo) \\
+      3,82\ ms &\longrightarrow \varphi = \dfrac{3,84\ ms \cdot 180\ ^{\circ}}{9,92\ ms} \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{\varphi=69,67\ ^{\circ}}\ .
+    \end{align*}
+
+    \begin{figure}[H]
+      \centering
+      \begin{subfigure}[h]{0.4\textwidth}
+        \centering
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_9_SemiperiodoEnSegundos.png}}
+        \caption{Semiperiodo en segundos.}
+        \label{fig:SemiperiodoEnSegundos}
+      \end{subfigure}
+      \hspace{20pt} 
+      \begin{subfigure}[h]{0.4\textwidth}
+        \centering
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_2_DiferenciaDeFaseEnSegundos.png}}
+        \caption{Desfase en seg. de las señales.}
+        \label{fig:DiferenciaDetiempoDeLasSeñales}
+      \end{subfigure}
+      \caption{Medición de diferencia de fase en modo dual.}
+      \label{fig:DesfaseEnSegundos}
+    \end{figure}
+
+    \subsubsection*{Método 2: medición en modo X-Y}
+    Este método se basa en el uso de la figura de Lissajous mostrada en el osciloscopio. Las mediciones se pueden ver en la 
+    Figura~\ref{fig:DesfaseConLissajous}. En base a la ecuación (XXXXXXXXX) se calcula el valor del ángulo
+    
+    \begin{align*}
+      \varphi = sen ^{-1} \left( \dfrac{A}{B} \right) = sen ^{-1} \left( \dfrac{0,944\ V}{1,01\ V} \right) \hspace{20pt} \longrightarrow \hspace{20pt} \Aboxed{\varphi = 69,17\ ^{\circ}}\ .
+    \end{align*}
+
+    \begin{figure}[H]
+      \centering
+      \begin{subfigure}[h]{0.4\textwidth}
+        \centering
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_6_CortesEjeYFigLis.png}}
+        \caption{Valores de corte del eje vertical.}
+        \label{fig:CortesEjeVertical_Lissajous}
+      \end{subfigure}
+      \hspace{20pt} 
+      \begin{subfigure}[h]{0.4\textwidth}
+        \centering
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_7_MáximosEjeVertical.png}}
+        \caption{Valores máximos del eje vertical.}
+        \label{fig:MaximosEjeVertical_Lissajous}
+      \end{subfigure}
+      \caption{Medición de diferencia de fase en  modo X-Y.}
+      \label{fig:DesfaseConLissajous}
+    \end{figure}
+
+
+    Una vez realizadas las mediciones se calculan la potencia activa \textbf{P}, reactiva \textbf{Q} y aparente \textbf{S}, con el uso de las ecuaciones (XXX),
+    (XXX) y (XXX) respectivamente
+
+    \begin{align*}
+      P &= V_i \cdot I_i \cdot cos(\varphi) = 213\ V \cdot 0,333\ A \cdot cos(69,17\ ^{\circ}) 
+                                \hspace{20pt} \therefore \hspace{20pt} \Aboxed{P = 25,22\ [W]} \\
+      Q &= V_i \cdot I_i \cdot sen(\varphi) = 213\ V \cdot 0,333\ A \cdot sin(69,17\ ^{\circ}) 
+                                \hspace{20pt} \therefore \hspace{20pt} \Aboxed{Q = 66,29\ [VAR]} \\
+      S &= \sqrt{P^2 + Q^2} =  \sqrt{(25,22\ W)^2 + (66,29\ VAR)^2}
+                                \hspace{20pt} \therefore \hspace{20pt} \Aboxed{S = 70,92\ [VA]} \ .
+    \end{align*}
+
+    \noindent De la misma forma, con la ecuación (XXX) se calcula el factor de potencia \textbf{f.d.p.}
+    \begin{align*}
+      f.d.p. = cos(\varphi) = cos(69,12 ^{\circ}) \hspace{20pt} \therefore \hspace{20pt} \Aboxed{f.d.p = 0,36}\ .
+    \end{align*}
+
+
+
