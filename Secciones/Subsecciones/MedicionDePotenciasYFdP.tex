@@ -49,13 +49,14 @@
         \caption{Medición en modo X-Y.}
         \label{fig:FiguraLissajous}
       \end{subfigure}
-      \caption{Medición de diferencia de fase}
+      \caption{Medición de diferencia de fase.}
       \label{fig:DiferenciaDeFase}
     \end{figure}
 
     \subsubsection*{Método 1: medición en modo dual}
-    Simplemente se procede a realizar una regla de tres simple, basándose en la Figura~\ref{fig:DesfaseEnSegundos}, mediante el
-    semiperiodo de la tensión de entrada y la diferencia en segundos entre las señales
+    Simplemente, se procede a realizar una regla de tres simple, basándose en la Figura~\ref{fig:DesfaseEnSegundos}, mediante el
+    semiperiodo de la tensión de entrada y la diferencia en segundos entre las señales. Por lo tanto, la \textbf{diferencia de
+    fase} es
 
     \begin{align*}
       9,92\ ms &\longrightarrow 180\ ^{\circ} (semiperiodo) \\
@@ -74,7 +75,7 @@
       \begin{subfigure}[h]{0.4\textwidth}
         \centering
         \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_2_DiferenciaDeFaseEnSegundos.png}}
-        \caption{Desfase en seg. de las señales.}
+        \caption{Desfase de las señales en seg.}
         \label{fig:DiferenciaDetiempoDeLasSeñales}
       \end{subfigure}
       \caption{Medición de diferencia de fase en modo dual.}
@@ -83,7 +84,7 @@
 
     \subsubsection*{Método 2: medición en modo X-Y}
     Este método se basa en el uso de la figura de Lissajous mostrada en el osciloscopio. Las mediciones se pueden ver en la 
-    Figura~\ref{fig:DesfaseConLissajous}. En base a la ecuación (XXXXXXXXX) se calcula el valor del ángulo
+    Figura~\ref{fig:DesfaseConLissajous}. En base a la ecuación~(XXXX) se calcula el valor de la \textbf{diferencia de fase}
     
     \begin{align*}
       \varphi = sen ^{-1} \left( \dfrac{A}{B} \right) = sen ^{-1} \left( \dfrac{0,944\ V}{1,01\ V} \right) \hspace{20pt} \longrightarrow \hspace{20pt} \Aboxed{\varphi = 69,17\ ^{\circ}}\ .
@@ -94,14 +95,14 @@
       \begin{subfigure}[h]{0.4\textwidth}
         \centering
         \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_6_CortesEjeYFigLis.png}}
-        \caption{Valores de corte del eje vertical.}
+        \caption{Valores de corte de la figura en el eje vertical (A).}
         \label{fig:CortesEjeVertical_Lissajous}
       \end{subfigure}
       \hspace{20pt} 
       \begin{subfigure}[h]{0.4\textwidth}
         \centering
         \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDePotenciasYFdP/Exp1_7_MáximosEjeVertical.png}}
-        \caption{Valores máximos del eje vertical.}
+        \caption{Valores máximos de la figura en el eje vertical (B).}
         \label{fig:MaximosEjeVertical_Lissajous}
       \end{subfigure}
       \caption{Medición de diferencia de fase en  modo X-Y.}
@@ -109,8 +110,9 @@
     \end{figure}
 
 
-    Una vez realizadas las mediciones se calculan la potencia activa \textbf{P}, reactiva \textbf{Q} y aparente \textbf{S}, con el uso de las ecuaciones (XXX),
-    (XXX) y (XXX) respectivamente
+    Con las mediciones anteriores ya realizadas, se calculan las potencias \textbf{activa} (P), \textbf{reactiva} (Q)
+    y \textbf{aparente} (S), con el uso de las ecuaciones~(XXXX), (XXXX) y (XXXX) respectivamente
+    %y \textbf{aparente} (S), con el uso de las ecuaciones~(\ref{fig:DiferenciaDeFase}), (\ref{fig:DiferenciaDeFase}) y (\ref{fig:DiferenciaDeFase}) respectivamente
 
     \begin{align*}
       P &= V_i \cdot I_i \cdot cos(\varphi) = 213\ V \cdot 0,333\ A \cdot cos(69,17\ ^{\circ}) 
@@ -121,7 +123,7 @@
                                 \hspace{20pt} \therefore \hspace{20pt} \Aboxed{S = 70,92\ [VA]} \ .
     \end{align*}
 
-    \noindent De la misma forma, con la ecuación (XXX) se calcula el factor de potencia \textbf{f.d.p.}
+    \noindent De la misma forma, con la ecuación~(XXX) se calcula el factor de potencia \textbf{f.d.p.}
     \begin{align*}
       f.d.p. = cos(\varphi) = cos(69,12 ^{\circ}) \hspace{20pt} \therefore \hspace{20pt} \Aboxed{f.d.p = 0,36}\ .
     \end{align*}
