@@ -1,0 +1,234 @@
+\subsection{Potencias en un sistema alimentado con corriente alterna}
+
+   Se puede definir el concepto de \textbf{potencia}, como cantidad de energía eléctrica 
+  entregada o absorbida por un elemento en un momento determinado, cuya unidad en el Sistema 
+  Internacional de Unidades es el \textbf{Watt} (\textbf{W}).
+
+ 	En circuitos de CA, se puede determinar 3 tipos de potencias \textbf{potencia activa}, 
+     \textbf{potencia reactiva} y \textbf{potencia aparente}.
+
+  La Potencia activa \textbf{(P)} también conocida como la \textit{potencia real}, es la que
+  es \textbf{consumida por cargas resistivas} propias de un circuito, y es medida 
+  en \textbf{watt (W)}.
+
+  La Potencia reactiva \textbf{(Q)}, es la potencia \textbf{consumida por cargas inductivas},
+  o \textbf{generada por cargas capacitivas}. Su unidad de medida es 
+  \textbf{volt ampere reactivo (VAR)}.
+
+  Por ultimo la potencia aparente \textbf{(S)}, es una combinación entre la potencia 
+  activa y la reactiva, su unidad de medida es \textbf{voltiamperio (VA)}.
+
+
+  Estas potencias se relacionan entre si de la siguiente manera
+        \begin{align}
+            \intertext{Partiendo de una señal seoidal}
+            V_t   &= V_m \cdot \sin(\omega t)\ [V] \ , \notag \\
+            \intertext{que exita un circuito generico que contiente una impedancia}
+            Z     &= R + jX \rightarrow Z \angle \varphi \ , \notag \\
+            \intertext{se produce una corriente electrica cucya forma es}
+            i_t   &= I_m \cdot \sin(\omega t - \varphi)\ [A] \ , \notag \\[3mm]
+            \intertext{la potencia instantania asociada a la señal de exitacion se obtiene mediante
+            el producto de la tensión por la corriente dando como resultado}
+            \hspace{20pt} \Aboxed{p_t  &= [V_m \cdot \sin(\omega t)] \cdot [I_m \cdot \sin(\omega t - \varphi)]\ [W] } \ . \label{eqn:Winst}
+         \end{align}
+
+      \newpage    
+      Ahora partiendo de la ecuación \ref{eqn:Winst}, la misma se la puede reescribir utilizando 
+      la siguiente igualdad 
+         \begin{align}
+            p_t   &= V_m\cdot \sin(\omega t)\cdot [I_m\cdot \sin(\omega t)\cdot \cos(\varphi) - I_m\cdot \cos(\omega t)\cdot \sen(\varphi)] \ , \notag \\
+            p_t   &= [2\cdot \sin^{2}(\omega t)]\cdot V I \cos(\varphi) - [2\cdot \sin(\omega t)\cdot \cos(\omega t)]\cdot V\cdot I\cdot \sen(\varphi) \ , \notag \\
+            \intertext{luego, aplicando las identidades}
+            2\cdot\sin^{2}(\alpha)  &= 1 - \cos(2\alpha) \ , \notag \\
+            \sin(2\alpha)           &= 2\cdot \sin(\alpha)\cdot \cos(\alpha) \ , \notag \\
+            \intertext{finalmente nos queda la siguiente expreción}
+            \hspace{20pt} \Aboxed{p_t  &= [1- \cos(2\cdot \omega t)]\cdot V\cdot I\cdot \cos(\alpha) - [\sin(2\cdot \omega t)]\cdot V\cdot I\cdot \sin(\alpha)} \ . \notag
+         \end{align}
+
+      De esta ultima expresión obtenida observamos que el termino a la izquierda
+      del signo negativo, corresponde a la \textbf{potencia activa P} asociada a lo componentes
+      resistivos de un sistema, mientras que el termino de la derecha, corresponde a la 
+      \textbf{potencia reactiva Q}, asociada a los componentes reactivos del mismo.
+
+      Operando algebraicamente la ultima expresión obtenida, se obtiene la version reducida
+      de dichas potencias   
+      \vspace{-40pt}  
+         \begin{align}       
+            \intertext{\label{eqn:PotActTot}}
+            \Aboxed{P   &= V\cdot I\cdot \cos(\alpha)}\ [W]  \ .
+            \intertext{\label{eqn:PotReacTot}}
+            \Aboxed{Q   &= V\cdot I\cdot \cos(\alpha)}\ [VAR] \ .  
+         \end{align}   
+
+      Por ultimo la \textbf{Potencia aparente total S}, se obtiene  sumando los aportes de
+      las potencias activas y reactivas, y como estas mismas se realizan en cuadratura se obtiene
+         \begin{align}
+            S^{2} = P^{2} + Q^{2} \hspace{20pt} \Rightarrow \hspace{20pt} \Aboxed{S = \sqrt{P^{2} + Q^{2}}}\ [VA] \ . \label{eqn:PotApaTot}       
+         \end{align}
+
+         \subsubsection{Obtención del triángulo de Potencia mediante fasores}
+            
+            El calculo de las potencias resistivas y reactivas, se pueden obtener de manera
+            directa mediante el uso de fasores. A continuación, se deduce los cálculos
+            necesarios para la obtención.
+               \begin{align}
+                  \intertext{Partiendo de una tensión descripta en fasores}
+                  \vec{V}  &=  \angle 0^0 \ , \notag \\
+                  \intertext{Exitando un circuito con una impedancia}
+                  Z        &= R + jX \rightarrow Z \angle \pm \varphi \ , \notag \\ 
+                  \intertext{Se genera una corriente}
+                  \vec{I}  &= I \angle \pm   \varphi  \ . \notag
+               \end{align}
+
+            La potencia activa total, como se vio en la sección anterior, se puede obtener 
+            mediante ecuación \ref{eqn:PotActTot}. La misma puede describir en termino de 
+            fasores como el \textbf{producto de sus módulos por el coseno del ángulo entre ellos}
+               \begin{align}
+                  P = \vec{|V|}\cdot \vec{|I|}\cdot \cos(\varphi) = V\cdot I\cdot \cos(\varphi) \ . \notag
+               \end{align}   
+
+            La potencia reactiva total, como se vio en la sección anterior, se puede obtener 
+            mediante ecuación \ref{eqn:PotReacTot}. La misma puede describir en termino de 
+            fasores como el \textbf{producto de sus módulos por el seno del ángulo entre ellos}
+               \begin{align}
+                  Q = \vec{|V|}\cdot \vec{|I|}\cdot \sin(\varphi) = V\cdot I\cdot \sin(\varphi) \ . \notag
+               \end{align}               
+            
+            Por ultimo, la \textbf{potencia aparente total (S)} se obtiene mediante el 
+            \textbf{producto de los módulos de los fasores tensión y corriente total}  
+               \begin{align}
+                  S = \vec{|V|}\cdot \vec{|I|}\cdot = V\cdot I\cdot \ . \notag
+               \end{align}
+            
+               
+            Una vez obtenido las 3 potencias mediante el método fasorial, partiendo de los 
+            fasores de corriente y de tensión, estos mismos pueden ser vistos como, \textbf{
+            el producto del módulo del fasor tensión y la proyección de la corriente en 
+            el eje real e imaginario respectivamente}
+               \begin{align}
+                  P  &= V \cdot(I\cdot \cos(\varphi)) \ , \notag \\ 
+                  Q  &= V \cdot(I\cdot \sin(\varphi)) \ . \notag 
+               \end{align}   
+
+            A la proyección de la corriente sobre el eje real, se la conoce como 
+            \textbf{corriente activa}. A su vez la proyección de la corriente en el eje 
+            imaginario se lo conoce como \textbf{corriente reactiva} como vemos en la 
+            figura \ref{fig:DiagFasor}. 
+
+            A su vez las potencias resistivas y reactivas, están relacionadas entre si de 
+            tal forma de que, si se suma los cuadrados de las mismas se obtiene
+               \begin{align}
+                     P^{2} + Q^{2} &=  (V\cdot I\cdot \cos(\varphi))^{2} + (V\cdot I\cdot \sin(\varphi))^{2} = (V\cdot I)^{2} \ , \notag \\
+                  \intertext{se deduce la potencia aparente}
+                     S^{2}\ &=\ P^{2}\ + Q^{2} \hspace{10pt} \rightarrow \hspace{10pt} S = \sqrt{P^{2} + Q^{2}} \ . \notag
+               \end{align}
+            
+            Debido a esta relación entre las 3 potencias, se conforma lo que se conoce como 
+            \textbf{triangulo de potencia} como vemos en la figura \ref{fig:TriangPot}
+
+               \begin{figure}[H]
+                  \centering
+                     \begin{subfigure}[b]{0.4\textwidth}
+                        \centering
+                        \frame{\includegraphics[width=\textwidth]{Imagenes/MarcoTeorico/DiagramaFasorDePotencias.png}}
+                        \caption{Diagrama Fasorial}
+                        \label{fig:DiagFasor}
+                  \end{subfigure}
+                  \hfill
+                  \begin{subfigure}[b]{0.5\textwidth}
+                        \centering
+                        \frame{\includegraphics[width=\textwidth]{Imagenes/MarcoTeorico/TrianguloDePotencias.png}}
+                        \caption{Triángulo de potencias}
+                        \label{fig:TriangPot}
+                  \end{subfigure}
+                  \hfill
+                  \caption{Obtención del triangulo de potencias}
+                  \label{fig:ObtDeTriagDePot}
+               \end{figure}
+          
+         \subsubsection{Factor de potencia}
+         
+               El \textbf{factor de potencia (fp)}, se lo puede definir como la relación que
+               existe entre la energía que es aprovechada ,capaz de realizar un trabajo, y la 
+               energía total del sistema disponible.
+               Dichas energías ser relacionan, directamente con la potencia activa (P) y 
+               la potencia aparente (S) de la siguiente manera
+               \begin{align}
+                  fp &= \frac{W_p}{W_s} \hspace{150pt} \therefore \Aboxed{fp = \frac{P}{S}} \ , \notag \\
+                  \intertext{sabiendo que}
+                  P  &= V\cdot I\cdot \cos(\varphi) \ ; \ S = V\cdot I \ \rightarrow 
+                  \ fp = \left(\dfrac{V\cdot I\cdot \cos(\varphi) }{V\cdot I}\right) 
+                  \therefore \Aboxed{fp = \cos(\varphi)} \ . \label{eqn:fpFinal} 
+               \end{align}
+
+               El factor de potencia, es un valor adimensional que indica 
+               \textbf{el rendimiento de un sistema}, osea que parte de la energía disponible 
+               será transforma en trabajo. Dicho valor es un número comprendido entre 0 y 1, 
+               donde 0 indicaría que un sistema es \textbf{puramente reactivo}, esto quiere 
+               decir que toda la energía disponible en él, retornara a la fuente en cada ciclo. 
+               En el caso de un fp = 1 esto indica que un sistema es \textbf{puramente resistivo}, 
+               osea que toda la energía disponible en él, sera consumida por una carga
+               transformándose en trabajo. En la practica, se busca un (fp) lo mas
+               cercano a 1 por razones mencionadas anteriormente, en caso de no tener un valor
+               cercano a la unidad, se realiza lo que se conoce como \textit{corrección de
+               factor de potencia}, el cual explicara mas adelante. 
+               El factor de potencia al igual que las potencias reactivas, es expresado en 
+               términos de \textit{adelanto}, para sistemas de carácter inductivo, o 
+               \textit{atraso de fase}, para sistemas de carácter capacitivo.
+
+            \subsubsection{Correccion del factor de potencia}
+               
+               Como se menciono anteriormente, en los sistemas se busca un factor de potencia 
+               lo mas cercano a uno debido a que la \textbf{la energía que es transportada 
+               y no se consume produce pérdidas}, por ende, entre mas cercano sea el valor a 
+               la unidad las perdidas serán mínimas en el sistema, pero en caso de ser mas alejado 
+               al valor unitario, se producirá mayores perdidas en el mismo, debiendo realizar
+               una \textbf{corrección del factor de potencia}.
+
+               Dicha corrección se logra, \textbf{conectando cargas reactivas en paralelo, 
+               de carácter contrario al que posee el sistema}, de esta manera no se modifica 
+               la tensión aplicada en el mismo. El calculo de corrección es realizado en base 
+               al \textit{factor de potencia deseado}.
+               
+               Para la ejecución del trabajo practico, se tiene en cuenta la corrección del 
+               fp para una carga inductiva mediante el siguiente planteamiento  
+               \begin{align}
+                  \intertext{Partiendo de un factor de potencia incial (\(fp_0\)) a un factor
+                  de potencia final (\(fp_f\)) }
+                  fp_0  &= \cos(\varphi_0) \hspace{10pt} y \hspace{10pt} fp_f = \cos(\varphi_f) \ , \notag \\
+                  \intertext{conciderando ambos en atraso para compensar el sistema se 
+                  conecta una carga capacitiva de valor (\(Q_C\))}
+                  Q_f   &= Q_0 - Q_C \rightarrow Q_C = Q_0 - Q_f  \ , \notag \\
+                  \intertext{reemplazando las potencias reactivas como indica la ecuacion \ref{eqn:PotReacTot}}
+                  Q_C   &= V\cdot I_0\cdot \sin(\varphi_0) - V\cdot I_f\cdot \sin(\varphi_f) \ , \notag \\ 
+                  Q_C   &= V\cdot I_0\cdot \cos(\varphi_0)\cdot \tan(\varphi_0)  - V\cdot I_f\cdot \cos(\varphi_f)\cdot \tan(\varphi_f) \ , \notag \\
+                  \intertext{como la potencia activa (P) no varia entonces}
+                  Q_C   &= P\cdot (\tan(\varphi_0) - \tan(\varphi_f)) \ , \notag \\
+                  \intertext{finalmente se puede encontrar la capacidad necesaria para la correccion desde el siguiente despeje}
+                  \dfrac{V^{2}}{X_C}   &= V^{2}\cdot \omega C = P\cdot (\tan(\varphi_0) - \tan(\varphi_f))  \ , \notag
+               \end{align}
+
+                  \begin{equation}
+                     \boxed{C = \dfrac{P\cdot (\tan(\varphi_0) - \tan(\varphi_f))}{V^{2}\cdot \omega}} \ . \label{eqn:CorrecFp}
+                  \end{equation}
+
+      
+
+               
+               
+
+
+
+							
+
+
+
+
+
+
+
+
+
+
+
+
