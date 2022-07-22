@@ -2,34 +2,33 @@
 
    Se puede definir el concepto de \textbf{potencia}, como cantidad de energía eléctrica 
   entregada o absorbida por un elemento en un momento determinado, cuya unidad en el Sistema 
-  Internacional de Unidades es el \textbf{Watt} (\textbf{W}).
+  Internacional de Unidades es el \textbf{watt} (\textbf{W}).
 
- 	En circuitos de CA, se puede determinar 3 tipos de potencias \textbf{potencia activa}, 
-     \textbf{potencia reactiva} y \textbf{potencia aparente}.
+   En circuitos de corriente alterna (CA), se puede determinar 3 tipos de potencias:
+   \textbf{activa}, \textbf{reactiva} y \textbf{aparente}.
 
-  La Potencia activa \textbf{(P)} también conocida como la \textit{potencia real}, es la que
-  es \textbf{consumida por cargas resistivas} propias de un circuito, y es medida 
-  en \textbf{watt (W)}.
+  La potencia activa (\textbf{P}) también conocida como la \textit{potencia real}, es la que
+  es consumida por cargas resistivas propias de un circuito, y es medida 
+  en \textbf{watt} (\textbf{W}). La potencia reactiva (\textbf{Q}), es la potencia 
+  intercambiada por cargas inductivas y/o capacitivas; su unidad de medida es 
+  \textbf{volt-ampere reactivo} (\textbf{VAR}). Por último, la potencia aparente (\textbf{S}),
+  es una combinación entre la potencia activa y la reactiva; su unidad de medida es 
+  \textbf{volt-ampere } (\textbf{VA}).
 
-  La Potencia reactiva \textbf{(Q)}, es la potencia \textbf{consumida por cargas inductivas},
-  o \textbf{generada por cargas capacitivas}. Su unidad de medida es 
-  \textbf{volt ampere reactivo (VAR)}.
+  Estas potencias se relacionan entre sí de la siguiente manera. Partiendo de una señal
 
-  Por ultimo la potencia aparente \textbf{(S)}, es una combinación entre la potencia 
-  activa y la reactiva, su unidad de medida es \textbf{voltiamperio (VA)}.
-
-
-  Estas potencias se relacionan entre si de la siguiente manera
         \begin{align}
-            \intertext{Partiendo de una señal seoidal}
-            V_t   &= V_m \cdot \sin(\omega t)\ [V] \ , \notag \\
-            \intertext{que exita un circuito generico que contiente una impedancia}
-            Z     &= R + jX \rightarrow Z \angle \varphi \ , \notag \\
-            \intertext{se produce una corriente electrica cucya forma es}
-            i_t   &= I_m \cdot \sin(\omega t - \varphi)\ [A] \ , \notag \\[3mm]
-            \intertext{la potencia instantania asociada a la señal de exitacion se obtiene mediante
-            el producto de la tensión por la corriente dando como resultado}
-            \hspace{20pt} \Aboxed{p_t  &= [V_m \cdot \sin(\omega t)] \cdot [I_m \cdot \sin(\omega t - \varphi)]\ [W] } \ . \label{eqn:Winst}
+            v(t)   &= V_m \cdot \sin(\omega t)\ [V] ~, \notag \\
+            \intertext{que excita un circuito genérico que contiene una impedancia 
+                        $Z = R + jX = |Z| \angle \varphi$,  se produce una corriente
+                        eléctrica cuya forma es}
+            i(t)   &= I_m \cdot \sin(\omega t - \varphi)\ [A] \ , \notag \\
+            \intertext{entonces, la potencia instantánea, asociada a la señal de 
+                excitación, se obtiene mediante el producto de la tensión por la 
+                corriente, dando como resultado}
+             \Aboxed{p(t)  &= [V_m \cdot \sin(\omega t)] 
+                            \cdot [I_m \cdot \sin(\omega t - \varphi)]\ [W] } ~.
+                            \label{eqn:Winst}
          \end{align}
 
       \newpage    
