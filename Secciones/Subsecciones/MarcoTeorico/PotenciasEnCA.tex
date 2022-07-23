@@ -81,20 +81,20 @@
             mediante ecuación~\ref{eqn:PotActTot}. La misma puede describir en termino de 
             fasores como el \textbf{producto de sus módulos por el coseno del ángulo entre ellos}
                \begin{align}
-                  P = \vec{|V|}\cdot \vec{|I|}\cdot \cos(\varphi) = V\cdot I\cdot \cos(\varphi) \ . \notag
+                  P = \vec{|V|} \vec{|I|} \cos(\varphi) = V I \cos(\varphi)~. \notag
                \end{align}   
 
             La potencia reactiva total, como se vio en la sección anterior, se puede obtener 
             mediante ecuación~\ref{eqn:PotReacTot}. La misma puede describir en termino de 
             fasores como el \textbf{producto de sus módulos por el seno del ángulo entre ellos}
                \begin{align}
-                  Q = \vec{|V|}\cdot \vec{|I|}\cdot \sin(\varphi) = V\cdot I\cdot \sin(\varphi) \ . \notag
+                  Q = \vec{|V|} \vec{|I|} \sin(\varphi) = V I \sin(\varphi)~. \notag
                \end{align}               
             
                Por último, la \textbf{potencia aparente total} (\textbf{S}) se obtiene mediante el 
             \textbf{producto de los módulos de los fasores tensión y corriente total}  
                \begin{align}
-                  S = \vec{|V|}\cdot \vec{|I|}\cdot = V\cdot I\cdot \ . \notag
+                  S = \vec{|V|} \vec{|I|} = V I~. \notag
                \end{align}
             
                
@@ -102,10 +102,10 @@
             fasores de corriente y de tensión, estos mismos pueden ser vistos como, \textbf{
             el producto del módulo del fasor tensión y la proyección de la corriente en 
             el eje real e imaginario respectivamente}
-               \begin{align}
-                  P  &= V \cdot(I\cdot \cos(\varphi)) \ , \notag \\ 
-                  Q  &= V \cdot(I\cdot \sin(\varphi)) \ . \notag 
-               \end{align}   
+               \begin{equation*}
+                  P  = V \cdot(I \cos(\varphi)) \hspace{20pt} ;
+                  \hspace{20pt} Q  = V \cdot(I \sin(\varphi))~.
+               \end{equation*}   
 
             A la proyección de la corriente sobre el eje real, se la conoce como 
             \textbf{corriente activa}. A su vez la proyección de la corriente en el eje 
@@ -115,7 +115,7 @@
             A su vez las potencias resistivas y reactivas, están relacionadas entre si de 
             tal forma de que, si se suma los cuadrados de las mismas se obtiene
                \begin{align}
-                     P^{2} + Q^{2} &=  (V\cdot I\cdot \cos(\varphi))^{2} + (V\cdot I\cdot \sin(\varphi))^{2} = (V\cdot I)^{2} \ , \notag \\
+                     P^{2} + Q^{2} &=  (V I \cos(\varphi))^{2} + (V I \sin(\varphi))^{2} = (V I)^{2} \ , \notag \\
                   \intertext{se deduce la potencia aparente}
                      S^{2}\ &=\ P^{2}\ + Q^{2} \hspace{10pt} \rightarrow \hspace{10pt} S = \sqrt{P^{2} + Q^{2}} \ . \notag
                \end{align}
@@ -150,13 +150,10 @@
                energía total del sistema disponible.
                Dichas energías ser relacionan, directamente con la potencia activa (P) y 
                la potencia aparente (S) de la siguiente manera
-               \begin{align}
-                  fp &= \frac{W_p}{W_s} \hspace{150pt} \therefore \Aboxed{fp = \frac{P}{S}} \ , \notag \\
-                  \intertext{sabiendo que}
-                  P  &= V\cdot I\cdot \cos(\varphi) \ ; \ S = V\cdot I \ \rightarrow 
-                  \ fp = \left(\dfrac{V\cdot I\cdot \cos(\varphi) }{V\cdot I}\right) 
-                  \therefore \Aboxed{fp = \cos(\varphi)} \ . \label{eqn:fpFinal} 
-               \end{align}
+               \begin{equation}
+               fp = \frac{W_p}{W_s} = \frac{P}{S} = \dfrac{V I \cos(\varphi)}{V I} \notag \\
+                        \hspace{20pt} \therefore \hspace{20pt} \boxed{fp = \cos(\varphi)}~.\label{eqn:fpFinal} 
+               \end{equation}
 
                El factor de potencia, es un valor adimensional que indica 
                \textbf{el rendimiento de un sistema}, osea que parte de la energía disponible 
