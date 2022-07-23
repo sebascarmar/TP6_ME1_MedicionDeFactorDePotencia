@@ -70,7 +70,7 @@
 
 
          \subsubsection{Obtención del triángulo de potencia mediante fasores}
-            El cálculo de las potencias resistivas y reactivas, se pueden obtener de manera
+            El cálculo de las potencias resistivas y reactivas se puede obtener de manera
             directa mediante el uso de fasores. A continuación, se deducen los cálculos
             necesarios para la obtención.
             Partiendo de una tensión descrita en fasores $\vec{V} = |\vec{V}| \angle \,  0^{\circ} $,
@@ -78,28 +78,27 @@
             genera una corriente $\vec{I}  = \vec{|I|} \angle \mp   \varphi $~.
 
             La potencia activa total, como se vio en la sección anterior, se puede obtener 
-            mediante ecuación~\ref{eqn:PotActTot}. La misma puede describir en termino de 
-            fasores como el \textbf{producto de sus módulos por el coseno del ángulo entre ellos}
+            mediante la ecuación~(\ref{eqn:PotActTot}). La misma se puede reescribir en término de 
+            fasores como el \textit{producto de sus módulos por el coseno del ángulo entre ellos}
                \begin{align}
                   P = \vec{|V|} \vec{|I|} \cos(\varphi) = V I \cos(\varphi)~. \notag
                \end{align}   
 
-            La potencia reactiva total, como se vio en la sección anterior, se puede obtener 
-            mediante ecuación~\ref{eqn:PotReacTot}. La misma puede describir en termino de 
-            fasores como el \textbf{producto de sus módulos por el seno del ángulo entre ellos}
+            \noindent La potencia reactiva total, como se vio en la sección anterior, se puede obtener 
+            mediante ecuación~(\ref{eqn:PotReacTot}). La misma se puede reescribir en término de 
+            fasores como el \textit{producto de sus módulos por el seno del ángulo entre ellos}
                \begin{align}
                   Q = \vec{|V|} \vec{|I|} \sin(\varphi) = V I \sin(\varphi)~. \notag
                \end{align}               
             
-               Por último, la \textbf{potencia aparente total} (\textbf{S}) se obtiene mediante el 
-            \textbf{producto de los módulos de los fasores tensión y corriente total}  
+             \noindent Por último, la potencia aparente total (S) se obtiene mediante el 
+            \textit{producto de los módulos de los fasores tensión y corriente total}  
                \begin{align}
                   S = \vec{|V|} \vec{|I|} = V I~. \notag
                \end{align}
             
                
-            Una vez obtenido las 3 potencias mediante el método fasorial, partiendo de los 
-            fasores de corriente y de tensión, estos mismos pueden ser vistos como, \textbf{
+             Las potencias activa y reactiva pueden ser vistas como, \textit{
             el producto del módulo del fasor tensión y la proyección de la corriente en 
             el eje real e imaginario respectivamente}
                \begin{equation*}
@@ -107,21 +106,21 @@
                   \hspace{20pt} Q  = V \cdot(I \sin(\varphi))~.
                \end{equation*}   
 
-            A la proyección de la corriente sobre el eje real, se la conoce como 
-            \textbf{corriente activa}. A su vez la proyección de la corriente en el eje 
-            imaginario se lo conoce como \textbf{corriente reactiva} como vemos en la 
+            \noindent A la proyección de la corriente sobre el eje real, se la conoce como 
+            \textbf{corriente activa}, y, a su vez, la proyección de la corriente en el eje 
+            imaginario se lo conoce como \textbf{corriente reactiva},tal y como se ve en la 
             Figura~\ref{fig:DiagFasor}. 
 
-            A su vez las potencias resistivas y reactivas, están relacionadas entre si de 
-            tal forma de que, si se suma los cuadrados de las mismas se obtiene
+            Además, las potencias resistivas y reactivas, están relacionadas entre sí de 
+            tal forma de que, si se suman los cuadrados de las mismas se obtiene
                \begin{align}
-                     P^{2} + Q^{2} &=  (V I \cos(\varphi))^{2} + (V I \sin(\varphi))^{2} = (V I)^{2} \ , \notag \\
-                  \intertext{se deduce la potencia aparente}
+                 P^{2} + Q^{2} &=  {(V I \cos(\varphi))}^2 + {(V I \sin(\varphi))}^2 = {(V I)}^2 \ , \notag \\
+                  \intertext{de donde se deduce la potencia aparente}
                      S^{2}\ &=\ P^{2}\ + Q^{2} \hspace{10pt} \rightarrow \hspace{10pt} S = \sqrt{P^{2} + Q^{2}} \ . \notag
                \end{align}
             
             Debido a esta relación entre las 3 potencias, se conforma lo que se conoce como 
-            \textbf{triangulo de potencia} como vemos en la Figura~\ref{fig:TriangPot}
+            \textbf{triángulo de potencia} como se ve en la Figura~\ref{fig:TriangPot}.
 
                \begin{figure}[H]
                   \centering
@@ -145,32 +144,34 @@
           
          \subsubsection{Factor de potencia}
          
-               El \textbf{factor de potencia (fp)}, se lo puede definir como la relación que
+         El \textbf{factor de potencia} (\textbf{fp}), se lo puede definir como la relación que
                existe entre la energía que es aprovechada, capaz de realizar un trabajo, y la 
                energía total del sistema disponible.
-               Dichas energías ser relacionan, directamente con la potencia activa (P) y 
-               la potencia aparente (S) de la siguiente manera
+               Dichas energías se relacionan, directamente con la potencia activa (P) y 
+               la potencia aparente (S) 
                \begin{equation}
                fp = \frac{W_p}{W_s} = \frac{P}{S} = \dfrac{V I \cos(\varphi)}{V I} \notag \\
                         \hspace{20pt} \therefore \hspace{20pt} \boxed{fp = \cos(\varphi)}~.\label{eqn:fpFinal} 
                \end{equation}
 
                El factor de potencia, es un valor adimensional que indica 
-               \textbf{el rendimiento de un sistema}, osea que parte de la energía disponible 
-               será transforma en trabajo. Dicho valor es un número comprendido entre 0 y 1, 
-               donde 0 indicaría que un sistema es \textbf{puramente reactivo}, esto quiere 
-               decir que toda la energía disponible en él, retornara a la fuente en cada ciclo. 
-               En el caso de un fp = 1 esto indica que un sistema es \textbf{puramente resistivo}, 
-               osea que toda la energía disponible en él, sera consumida por una carga
-               transformándose en trabajo. En la practica, se busca un (fp) lo mas
-               cercano a 1 por razones mencionadas anteriormente, en caso de no tener un valor
+               el \textbf{rendimiento de un sistema}, es decir, qué parte de la energía disponible 
+               se transforma en trabajo. Dicho valor es un número comprendido entre 0 y 1, 
+               donde 0 indica que un sistema es \textbf{puramente reactivo}, lo cual quiere 
+               decir que toda la energía disponible en él retorna a la fuente en cada ciclo. 
+               En el caso de un $fp = 1$ el sistema es \textbf{puramente resistivo},
+               es decir, toda la energía disponible en él es consumida por una carga
+               transformándose en trabajo.
+
+               En la práctica, se busca un fp lo más
+               cercano a 1 para aprovechar al máximo la energía. En caso de no tener un valor
                cercano a la unidad, se realiza lo que se conoce como \textit{corrección de
-               factor de potencia}, el cual explicara mas adelante. 
-               El factor de potencia al igual que las potencias reactivas, es expresado en 
+               factor de potencia}, el cual se explica en la siguiente sección.
+               El factor de potencia, al igual que las potencias reactivas, es expresado en 
                términos de \textit{adelanto}, para sistemas de carácter inductivo, o 
                \textit{atraso de fase}, para sistemas de carácter capacitivo.
 
-            \subsubsection{Correccion del factor de potencia}
+            \subsubsection{Corrección del factor de potencia}
                
                Como se menciono anteriormente, en los sistemas se busca un factor de potencia 
                lo mas cercano a uno debido a que la \textbf{la energía que es transportada 
@@ -187,18 +188,18 @@
                Para la ejecución del trabajo practico, se tiene en cuenta la corrección del 
                fp para una carga inductiva mediante el siguiente planteamiento  
                \begin{align}
-                  \intertext{Partiendo de un factor de potencia incial (\(fp_0\)) a un factor
+                  \intertext{Partiendo de un factor de potencia inicial (\(fp_0\)) a un factor
                   de potencia final (\(fp_f\)) }
                   fp_0  &= \cos(\varphi_0) \hspace{10pt} y \hspace{10pt} fp_f = \cos(\varphi_f) \ , \notag \\
-                  \intertext{conciderando ambos en atraso para compensar el sistema se 
+                  \intertext{considerando ambos en atraso para compensar el sistema se 
                   conecta una carga capacitiva de valor (\(Q_C\))}
                   Q_f   &= Q_0 - Q_C \rightarrow Q_C = Q_0 - Q_f  \ , \notag \\
-                  \intertext{reemplazando las potencias reactivas como indica la ecuacion~\ref{eqn:PotReacTot}}
+                  \intertext{reemplazando las potencias reactivas como indica la ecuación~(\ref{eqn:PotReacTot})}
                   Q_C   &= V\cdot I_0\cdot \sin(\varphi_0) - V\cdot I_f\cdot \sin(\varphi_f) \ , \notag \\ 
                   Q_C   &= V\cdot I_0\cdot \cos(\varphi_0)\cdot \tan(\varphi_0)  - V\cdot I_f\cdot \cos(\varphi_f)\cdot \tan(\varphi_f) \ , \notag \\
                   \intertext{como la potencia activa (P) no varia entonces}
                   Q_C   &= P\cdot (\tan(\varphi_0) - \tan(\varphi_f)) \ , \notag \\
-                  \intertext{finalmente se puede encontrar la capacidad necesaria para la correccion desde el siguiente despeje}
+                  \intertext{finalmente se puede encontrar la capacidad necesaria para la corrección desde el siguiente despeje}
                   \dfrac{V^{2}}{X_C}   &= V^{2}\cdot \omega C = P\cdot (\tan(\varphi_0) - \tan(\varphi_f))  \ , \notag
                \end{align}
 
