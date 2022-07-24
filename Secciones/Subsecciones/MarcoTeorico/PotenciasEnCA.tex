@@ -186,28 +186,44 @@
                al \textit{factor de potencia deseado}.
                
                Para la ejecución del trabajo practico, se tiene en cuenta la corrección del 
-               fp para una carga inductiva mediante el siguiente planteamiento  
+               fp para una carga inductiva mediante el siguiente planteamiento.
+
+               Partiendo de un factor de potencia inicial (\(fp_0\)) a un factor 
+               de potencia final (\(fp_f\))
                \begin{align}
-                  \intertext{Partiendo de un factor de potencia inicial (\(fp_0\)) a un factor
-                  de potencia final (\(fp_f\)) }
-                  fp_0  &= \cos(\varphi_0) \hspace{10pt} y \hspace{10pt} fp_f = \cos(\varphi_f) \ , \notag \\
-                  \intertext{considerando ambos en atraso para compensar el sistema se 
-                  conecta una carga capacitiva de valor (\(Q_C\))}
-                  Q_f   &= Q_0 - Q_C \rightarrow Q_C = Q_0 - Q_f  \ , \notag \\
-                  \intertext{reemplazando las potencias reactivas como indica la ecuación~(\ref{eqn:PotReacTot})}
-                  Q_C   &= V\cdot I_0\cdot \sin(\varphi_0) - V\cdot I_f\cdot \sin(\varphi_f) \ , \notag \\ 
-                  Q_C   &= V\cdot I_0\cdot \cos(\varphi_0)\cdot \tan(\varphi_0)  - V\cdot I_f\cdot \cos(\varphi_f)\cdot \tan(\varphi_f) \ , \notag \\
-                  \intertext{como la potencia activa (P) no varia entonces}
-                  Q_C   &= P\cdot (\tan(\varphi_0) - \tan(\varphi_f)) \ , \notag \\
-                  \intertext{finalmente se puede encontrar la capacidad necesaria para la corrección desde el siguiente despeje}
-                  \dfrac{V^{2}}{X_C}   &= V^{2}\cdot \omega C = P\cdot (\tan(\varphi_0) - \tan(\varphi_f))  \ , \notag
+                  fp_0  &= \cos(\varphi_0) \hspace{10pt} y \hspace{10pt} fp_f = \cos(\varphi_f) \ , \notag
                \end{align}
 
-                  \begin{equation}
-                     \boxed{C = \dfrac{P\cdot (\tan(\varphi_0) - \tan(\varphi_f))}{V^{2}\cdot \omega}}~. \label{eqn:CorrecFp}
-                  \end{equation}
+               \noindent considerando ambos en atraso para compensar el sistema se 
+               conecta una carga capacitiva de valor (\(Q_C\))
+               \begin{align}  
+                  Q_f   &= Q_0 - Q_C \rightarrow Q_C = Q_0 - Q_f  \ , \notag
+               \end{align}
 
-      
+               \noindent reemplazando las potencias reactivas como indica la ecuación (\ref{eqn:PotReacTot}) 
+               \begin{align}   
+                  Q_C   &= V\cdot I_0\cdot \sin(\varphi_0) - V\cdot I_f\cdot \sin(\varphi_f) \ , \notag \\ 
+                  Q_C   &= V\cdot I_0\cdot \cos(\varphi_0)\cdot \tan(\varphi_0)  - V\cdot I_f\cdot \cos(\varphi_f)\cdot \tan(\varphi_f) \ , \notag
+               \end{align}   
+
+               \noindent como la potencia activa (P) no varia entonces
+               \begin{align}
+                  Q_C   &= P\cdot (\tan(\varphi_0) - \tan(\varphi_f)) \ , \notag
+               \end{align}
+
+               \noindent finalmente se puede encontrar la capacidad necesaria para la corrección desde el siguiente despeje
+               \begin{align}
+                  \dfrac{V^{2}}{X_C} = V^{2}\cdot \omega C = P\cdot (\tan(\varphi_0) - \tan(\varphi_f))  \ \rightarrow C = \dfrac{P\cdot (\tan(\varphi_0) - \tan(\varphi_f))}{V^{2}\cdot \omega}~. \notag
+               \end{align}
+
+               \noindent La ecuación obtenida, hace referencia a la obtención de una capacitancia 
+               para un valor de (\(fp_f\)) como referencia. Para el desarrollo del presente trabajo práctico, 
+               no se considerara un valor de (\(fp_f\)), o mas bien se tendrá en consideración un (\(fp_f = 1\)), 
+               para obtener la capacitancia buscada.
+               De esta manera la ecuación final queda reducida a la siguiente expresión
+                  \begin{equation}
+                    \boxed{C = \dfrac{P\cdot (\tan(\varphi_0))}{V^{2}\cdot \omega}~~[F]}~. \label{eqn:CorrecFp}
+                  \end{equation}
 
                
                
