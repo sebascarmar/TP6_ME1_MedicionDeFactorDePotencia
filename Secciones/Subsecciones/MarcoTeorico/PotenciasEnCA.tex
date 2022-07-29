@@ -44,6 +44,7 @@
                   &2 \sin^{2}(\alpha)  = 1 - \cos(2\alpha) \hspace{20pt} ; \hspace{20pt} \sin(2\alpha) = 2 \sin(\alpha) \cos(\alpha) \ , \notag \\
             \intertext{finalmente queda la siguiente expresión}
             p(t)  &= [1- \cos(2 \omega t)]\cdot V I \cos(\varphi) - [\sin(2 \omega t)]\cdot V I \sin(\varphi) ~. 
+         \label{eqn:Pot_ins}
          \end{align}
 
       De esta última expresión obtenida se observa que el primer término del segundo miembro
@@ -51,8 +52,7 @@
       resistivos de un sistema, mientras que el segundo término del mismo, corresponde a la 
       \textbf{potencia reactiva Q}, asociada a los componentes reactivos del mismo.
 
-      Operando algebráicamente la última expresión obtenida, se obtiene la versión reducida
-      de dichas potencias   
+      Luego, realizando la integración en el período T de la ecuación~(\ref{eqn:Pot_ins}), se obtiene
 
         \begin{equation}
             \boxed{P   = V I \cos(\alpha)~[W]}~.  \label{eqn:PotActTot}
@@ -154,75 +154,77 @@
                         \hspace{20pt} \therefore \hspace{20pt} \boxed{fp = \cos(\varphi)}~.\label{eqn:fpFinal} 
                \end{equation}
 
-               El factor de potencia, es un valor adimensional que indica 
-               el \textbf{rendimiento de un sistema}, es decir, qué parte de la energía disponible 
-               se transforma en trabajo. Dicho valor es un número comprendido entre 0 y 1, 
-               donde 0 indica que un sistema es \textbf{puramente reactivo}, lo cual quiere 
-               decir que toda la energía disponible en él retorna a la fuente en cada ciclo. 
-               En el caso de un $fp = 1$ el sistema es \textbf{puramente resistivo},
-               es decir, toda la energía disponible en él es consumida por una carga
-               transformándose en trabajo.
+               El factor de potencia, es un valor adimensional que indica el 
+               \textbf{rendimiento de un sistema}, es decir, qué parte de la energía disponible 
+               se transforma en trabajo. Dicho valor es un número comprendido entre 0 y 1, donde 
+               0 indica que un sistema es\textbf{puramente reactivo}, lo cual quiere decir que 
+               toda la energía disponible en él retorna a la fuente en cada ciclo. En el caso de
+                un $fp = 1$ el sistema es \textbf{puramente resistivo}, es decir, toda la energía
+               disponible en él es consumida por una carga transformándose en trabajo.
 
-               En la práctica, se busca un fp lo más
-               cercano a 1 para aprovechar al máximo la energía. En caso de no tener un valor
-               cercano a la unidad, se realiza lo que se conoce como \textit{corrección de
-               factor de potencia}, el cual se explica en la siguiente sección.
+               En la práctica, se busca un fp lo más cercano a 1 para aprovechar al máximo la 
+               energía. En caso de no tener un valor cercano a la unidad, se realiza lo que se 
+               conoce como \textit{corrección de factor de potencia}, el cual se explica en la 
+               siguiente sección.
                El factor de potencia, al igual que las potencias reactivas, es expresado en 
                términos de \textit{adelanto}, para sistemas de carácter inductivo, o 
                \textit{atraso de fase}, para sistemas de carácter capacitivo.
 
             \subsubsection{Corrección del factor de potencia}
                
-               Como se menciono anteriormente, en los sistemas se busca un factor de potencia 
-               lo mas cercano a uno debido a que la \textbf{la energía que es transportada 
-               y no se consume produce pérdidas}, por ende, entre mas cercano sea el valor a 
-               la unidad las perdidas serán mínimas en el sistema, pero en caso de ser mas alejado 
-               al valor unitario, se producirá mayores perdidas en el mismo, debiendo realizar
-               una \textbf{corrección del factor de potencia}.
+               Como se mencionó anteriormente, en los sistemas se busca un factor de potencia
+               lo más cercano a 1, debido a que \textbf{la energía que es transportada 
+               y no se consume produce pérdidas}. Por ende, entre más cercano sea el valor a la unidad, las pérdidas
+               serán mínimas en el sistema, pero en caso de ser más alejado al valor unitario, se
+               producirán mayores pérdidas en el mismo, debiendo realizar una 
+               \textbf{corrección del factor de potencia}.
 
                Dicha corrección se logra, \textbf{conectando cargas reactivas en paralelo, 
-               de carácter contrario al que posee el sistema}, de esta manera no se modifica 
-               la tensión aplicada en el mismo. El calculo de corrección es realizado en base 
-               al \textit{factor de potencia deseado}.
-               
-               Para la ejecución del trabajo practico, se tiene en cuenta la corrección del 
-               fp para una carga inductiva mediante el siguiente planteamiento.
+               de carácter contrario al que posee el sistema}, de ésta manera no se modifica la tensión aplica-
+               da en el mismo. El cálculo de corrección es realizado en base al factor de potencia
+               deseado. Para la ejecución del trabajo práctico, se tiene en cuenta la corrección del fp
+               para una carga inductiva mediante el siguiente planteamiento
 
-               Partiendo de un factor de potencia inicial (\(fp_0\)) a un factor 
-               de potencia final (\(fp_f\))
+               Se parte de un factor de potencia inicial \(fp_0\) a un factor 
+               de potencia final \(fp_f\)
                \begin{align}
-                  fp_0  &= \cos(\varphi_0) \hspace{10pt} y \hspace{10pt} fp_f = \cos(\varphi_f) \ , \notag
+                  fp_0  &= \cos(\varphi_0) \hspace{10pt} y \hspace{10pt} fp_f = \cos(\varphi_f)~,  \notag
                \end{align}
 
-               \noindent considerando ambos en atraso para compensar el sistema se 
-               conecta una carga capacitiva de valor (\(Q_C\))
+               \noindent y considerando ambos en atraso, para compensar el sistema se 
+               conecta una carga capacitiva de potencia reactiva \(Q_C\)
                \begin{align}  
-                  Q_f   &= Q_0 - Q_C \rightarrow Q_C = Q_0 - Q_f  \ , \notag
+                  Q_f   &= Q_0 - Q_C \hspace{10pt}\Longrightarrow\hspace{10pt} Q_C = Q_0 - Q_f ~. \notag
                \end{align}
 
-               \noindent reemplazando las potencias reactivas como indica la ecuación (\ref{eqn:PotReacTot}) 
+               \noindent Reemplazando en la expresión anterior la ecuación (\ref{eqn:PotReacTot}) para 
+               cada potencia reactiva
                \begin{align}   
-                  Q_C   &= V\cdot I_0\cdot \sin(\varphi_0) - V\cdot I_f\cdot \sin(\varphi_f) \ , \notag \\ 
-                  Q_C   &= V\cdot I_0\cdot \cos(\varphi_0)\cdot \tan(\varphi_0)  - V\cdot I_f\cdot \cos(\varphi_f)\cdot \tan(\varphi_f) \ , \notag
+                  Q_C   &= V I_0 \sin(\varphi_0) - V I_f \sin(\varphi_f)  \notag \\ 
+                  Q_C   &= V I_0 \sin(\varphi_0)\cdot\dfrac{\cos(\varphi_0)}{\cos(\varphi_0)}
+                         - V I_f \sin(\varphi_f)\cdot\dfrac{\cos(\varphi_f)}{\cos(\varphi_f)}  \notag \\ 
+                  Q_C   &= V I_0 \cos(\varphi_0)\cdot \tan(\varphi_0)  - V I_f \cos(\varphi_f)\cdot \tan(\varphi_f) \ , \notag
                \end{align}   
 
-               \noindent como la potencia activa (P) no varia entonces
+               \noindent como la potencia activa P no varía entonces
                \begin{align}
-                  Q_C   &= P\cdot (\tan(\varphi_0) - \tan(\varphi_f)) \ , \notag
+                  Q_C   &= P\cdot (\tan(\varphi_0) - \tan(\varphi_f))~. \notag
                \end{align}
 
-               \noindent finalmente se puede encontrar la capacidad necesaria para la corrección desde el siguiente despeje
+               \noindent Finalmente, teniendo en cuenta que $Q_C= \dfrac{V^{2}}{X_C}$, y la expresión anterior, se igualan
+               y se obtiene 
                \begin{align}
-                  \dfrac{V^{2}}{X_C} = V^{2}\cdot \omega C = P\cdot (\tan(\varphi_0) - \tan(\varphi_f))  \ \rightarrow C = \dfrac{P\cdot (\tan(\varphi_0) - \tan(\varphi_f))}{V^{2}\cdot \omega}~. \notag
+                  \dfrac{V^{2}}{X_C} &=  P\cdot (\tan(\varphi_0) - \tan(\varphi_f))  \notag\\
+                  V^{2}\cdot \omega C &= P\cdot (\tan(\varphi_0) - \tan(\varphi_f))  \notag\\[3mm]
+                  \Longrightarrow \hspace{20pt}C &= \dfrac{P\cdot (\tan(\varphi_0) - \tan(\varphi_f))}{V^{2}\cdot \omega}~. \notag
                \end{align}
 
-               \noindent La ecuación obtenida, hace referencia a la obtención de una capacitancia 
-               para un valor de (\(fp_f\)) como referencia. Para el desarrollo del presente trabajo práctico, 
-               no se considerara un valor de (\(fp_f\)), o mas bien se tendrá en consideración un (\(fp_f = 1\)), 
-               para obtener la capacitancia buscada.
+               \noindent La ecuación antes mencionada, hace referencia a la obtención de una capacitancia 
+               para un valor de \(fp_f\) como referencia. Para el desarrollo del presente trabajo práctico, 
+               se tendrá en consideración un \(fp_f = 1\), para obtener la capacitancia buscada.
                De esta manera la ecuación final queda reducida a la siguiente expresión
                   \begin{equation}
-                    \boxed{C = \dfrac{P\cdot (\tan(\varphi_0))}{V^{2}\cdot \omega}~~[F]}~. \label{eqn:CorrecFp}
+                    \boxed{C = \dfrac{P\cdot \tan(\varphi_0)}{V^{2}\cdot \omega}~~[F]}~. \label{eqn:CorrecFp}
                   \end{equation}
 
                
