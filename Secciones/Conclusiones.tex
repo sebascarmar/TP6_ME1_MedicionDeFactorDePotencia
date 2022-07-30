@@ -76,16 +76,37 @@
     %    \omega \cdot C = \frac{ \frac{S \cdot cos(\phi) \cdot sen(\phi)}{cos(\phi)}}{V^2}\hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{C = \frac{P \cdot tg(\phi)}{\omega \cdot V^2}}\ .
     % \end{align*}
 
-
-    Se ha visto en en el desarrollo del presente informe que, debido que la red posee una composición 
-    armónica, es decir no es senoidal pura, al conectar el capacitor se produce una atenuación de 
-    las bajas frecuencias y el aporte en amplitud de los armónicos de menor energía en la señal es 
-    mayor. Como consecuencia de lo anterior expuesto, se observa una deformación en la señal de 
-    salida debido a la influencia del capacitor de compensación.
-
-    Por otro lado, se observó que los métodos utilizados para medir el desfasaje de tensión y 
-    corriente se corresponden entre sí en los resultados, lo que da una idea de la fidelidad 
+    Los métodos utilizados para medir el desfasaje de tensión y 
+    corriente, se corresponden entre sí en los resultados, lo que da una idea de la fidelidad 
     de los mismos para la determinación de éste parámetro.
+
+    Por otro lado, se ha visto en el desarrollo del presente informe que, debido que la red posee una composición 
+    armónica, es decir no es senoidal pura. Debido a lo anterior, al conectar el capacitor se produce un realce de 
+    las altas frecuencias, y el aporte en amplitud de los armónicos en la señal es 
+    notorio. Como consecuencia de lo anterior expuesto, se observa una deformación en la señal de 
+    salida debido a la influencia de dicho capacitor de compensación.
+
+    Como complemento al experimento \ref{subsubsec:Medicion del factor de potencia corregido}, 
+    donde se obtuvo la potencia aparente debido a la corrección del factor de potencia, se realiza un análisis en el 
+    dominio del tiempo, empleando los filtros digitales del osciloscopio. El mismo permite dar un acercamiento 
+    al nuevo desfasaje ya que, como se ha mencionado en dicha sección, mediante el modo X-Y se complica 
+    determinarlo. La Figura \ref{fig: Desfasaje tensión-corriente.} muestra la nueva señal filtrada, 
+    con ésta puede procederse a realizar un cálculo en relación a la proporcionalidad entre pulsación 
+    angular y tiempo, y de ésta manera obtener el nuevo desfase.
+
+    % Adicionalmente, puede determinarse el factor de potencia corregido, a partir de las señales
+    % obtenidas en el tiempo. El principal problema es la cantidad de armónicos montados sobre 
+    % la señal de corriente, para resolverlo se debe aplicar un filtro pasa bajos a la misma, de
+    % ésta manera, es más sencillo realizar los cálculos.
+
+        \begin{figure}[H]
+          \centering
+          \frame{\includegraphics[width=0.45\textwidth]{Imagenes/ActividadPractica/CorreccionDeFdP/Exp2_15_Vin-Iin-ConCapacitorYFiltroEnOsc.png}}
+          \caption{Medición del desfasaje de tensión y corriente usando filtros.}
+          \label{fig: Desfasaje tensión-corriente.}
+        \end{figure}      
+
+    
 
 
     
