@@ -1,11 +1,11 @@
   \subsection{Figura de Lissajous}
                
-      La figura de Lissajous, son comúnmente usadas para la determinación de la diferencia
+      Las figuras de Lissajous son comúnmente usadas para la determinación de la diferencia
       de fase entre dos señales de la misma frecuencia. Los osciloscopios cuentan con un modo
       conocido como \textbf{modo X-Y}, el cual toma una de las señales y la inyecta en el canal
-      Y, y la otra en el canal X de esa manera, internamente el osciloscopio se encarga de 
-      sumar punto a punto las señales y muestra en pantalla la figura de Lissajous formada por
-      dichas señales.
+      1, y la otra en el canal 2, de esa manera, internamente el osciloscopio se encarga de 
+      usar estas señales para los trazos horizontal y vertical, y así se forma la figura de
+      Lissajous. 
 
          \begin{figure}[H]
             \centering
@@ -14,10 +14,10 @@
             \label{fig:LissajTipos}                 
          \end{figure}
 
-      De los tipos de figuras de Lissajous vistas en la Figura \ref{fig:LissajTipos}, 
-      en el presente trabajo practico, se destacara las figuras de \textbf{tipo elípticas}, 
-      las cuales son formadas por señales con valores de fase relativamente distinto a $\pi$/2 
-      y con diferentes amplitudes
+      De los tipos de curvas de Lissajous vistas en la Figura \ref{fig:LissajTipos}, 
+      en el presente trabajo práctico, se destacará la figura de tipo \textbf{elíptica}, 
+      las cuales son formadas por señales con valores de fase distintos a $\dfrac{\pi}{2}$ 
+      y/o con diferentes amplitudes.
 
       \begin{figure}[H]
          \centering
@@ -25,29 +25,28 @@
          \caption{Figura de Lissajous de tipo elíptico.}
          \label{fig:LissajElip}           
       \end{figure}
-
+      
+      \newpage
       La obtención de la diferencia de fase entre las señales se pueden determinar de la
       siguiente manera.
-      \newpage
-
-      \noindent Considerando las siguientes expresiones
+      Considerando las siguientes expresiones
       \begin{align}
-         x &= A\cdot \sin(\omega t) \hspace{10pt} ; \hspace{10pt} y = B\cdot \sin(\omega t + \phi) \ , \notag
+         x &= X\cdot \sin(\omega t) \hspace{10pt} ; \hspace{10pt} y = B\cdot \sin(\omega t + \varphi) \ , \notag
       \end{align}
       
-      \noindent de la Figura \ref{fig:LissajElip} se deduce que cuando
+      \noindent de la Figura \ref{fig:LissajElip}, para $x = 0$ se deduce que
       \begin{align}
-         x &= 0 \hspace{10pt} , entonces \hspace{10pt} y = A \ , \notag
+         x &= X\cdot \sin(\omega t) = 0 \hspace{10pt} \Longrightarrow \hspace{10pt} t = 0 ~ , \notag \\
+         \intertext{por lo tanto}
+         y &= B\cdot \sin(\omega 0 + \varphi) = B\cdot \sin(\varphi) = A ~ . \notag 
       \end{align}   
 
-      \noindent lo cual se repetirá cuando \(\omega\) t = 0, 2\(\pi\), .... n\(\pi\). Finalmente para 
-      \( \omega \) t = 0 se obtiene
-
+      \noindent Finalmente
       \begin{align}
-         \hspace{20pt} y &= B\cdot \sin(\phi) = A \hspace{20pt} \therefore \hspace{-70pt} \Aboxed{\dfrac{A}{B} = \sin(\phi)} \ . \notag 
+         \sin(\varphi) = \dfrac{A}{B} ~ . \notag
       \end{align}
       
-      \noindent De la última ecuación despejamos el ángulo de desfase
+      \noindent De la última ecuación se despeja el ángulo de desfase
       \begin{equation}
          \boxed{\varphi = \sin^{-1}\ \left(\dfrac{A}{B} \right)}   \ . \label{eqn:AngDeDesf}   
       \end{equation}
