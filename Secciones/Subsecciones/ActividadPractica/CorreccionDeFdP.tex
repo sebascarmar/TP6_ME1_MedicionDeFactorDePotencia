@@ -20,12 +20,11 @@
 
         
 
-    \subsubsection{Medicion del factor de potencia corregido}
+    \subsubsection{Medición del factor de potencia corregido}\label{subsubsec:Medicion del factor de potencia corregido}
 
-          Como se dificulta medir la diferencia de fase entre una señal y otra con el método del modo X-Y,
-          se procede a determinar dicho desfasaje a partir de las señales en el dominio del tiempo. 
-          Se dispone de un capacitor de valor 4,7[$\mu$F], con lo cual se cumple el requisito presentado
-          anteriormente. Se procede a la conexión del mismo, y se observa en el osciloscopio el resultado.
+          Se dispone de un capacitor de valor $4,7~\mu F$, con lo cual se cumple el requisito presentado
+          anteriormente,entonces se procede a la conexión del mismo, y a continuación se determina la nueva potencia aparente. 
+          En la Figura \ref{fig: Señal_Correccion}, se visualiza el resultado de la modificación en el osciloscopio.
         
         \begin{figure}[H]
           \centering
@@ -34,35 +33,34 @@
           \label{fig: Señal_Correccion}
         \end{figure}
 
-        Se observa una importante cantidad de armónicos sumados a la señal de corriente, ésto debido
+        La señal resultante tiene una importante cantidad de armónicos sumados a la señal de corriente, ésto debido
         a la deformación provocada por la carga conectada a la red.
 
-         Con los nuevos valores de tension y corriente, se determina el valor de la nueva potencia 
+         Con los nuevos valores de tensión y corriente, se determina el valor de la nueva potencia 
          aparente
 
         \begin{align*}
-          S = V\,I  = 213~V \cdot 0,115\ A \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{S = 24,50 [VA]}.
+          S = V\,I  = 213~V \cdot 0,115\ A \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{S = 24,50 ~[VA]}.
         \end{align*}
 
-          Adicionalmente, puede determinarse el factor de potencia corregido, a partir de las señales
-          obtenidas en el tiempo. El principal problema es la cantidad de armónicos montados sobre 
-          la señal de corriente, para resolverlo se debe aplicar un filtro pasa bajos a la misma, de
-         ésta manera, es más sencillo realizar los cálculos.
+        Comparando éste último valor con el obtenido antes de corregir, 
+        cuyo valor fué de $70.92~VA$, es notable la disminución de magnitud 
+        de la potencia aparente al colocar en paralelo el capacitor.
+        En éste caso, debido a la distorsión armónica, se complica bastante el 
+        cálculo del factor de potencia, y en consecuencia de la potencia 
+        activa y reactiva, por tal razón, éstas últimas no se calculan. No obstante, puede hacerse una mejor visualización 
+        empleando los filtros del osciloscopio, lo cual no forma parte del 
+        experimento, y se analizará más adelante.
 
-        \begin{figure}[H]
-          \centering
-          \frame{\includegraphics[width=0.45\textwidth]{Imagenes/ActividadPractica/CorreccionDeFdP/Exp2_15_Vin-Iin-ConCapacitorYFiltroEnOsc.png}}
-          \caption{Medición del desfasaje de tensión y corriente.}
-          \label{fig: Desfasaje tensión-corriente.}
-        \end{figure}  
 
-        Se tiene un semiperíodo de $10~ms$ (lo que se corresponde con la frecuencia de la red de $50~Hz$),
-        que equivalen a una pulsación de $180 ^{\circ}$, y usando la relación de tiempo/división del 
-        osciloscopio junto con la relación entre ángulo y tiempo, se determina de forma aproximada la correspondencia 
-        en grados del desfasaje de la señal
 
-        \begin{align*}
-          \varphi = sen ^{-1} \left( \dfrac{t_{0} \cdot 180\ ^{\circ}}{0,5 \cdot T} \right) = sen ^{-1} \left( \dfrac{1,12~ms \cdot 180\ ^{\circ}}{10~ms} \right) \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{\varphi = 20,16\ ^{\circ}}\ .
-        \end{align*}    
+        % Se tiene un semiperíodo de $10~ms$ (lo que se corresponde con la frecuencia de la red de $50~Hz$),
+        % que equivalen a una pulsación de $180 ^{\circ}$, y usando la relación de tiempo/división del 
+        % osciloscopio junto con la relación entre ángulo y tiempo, se determina de forma aproximada la correspondencia 
+        % en grados del desfasaje de la señal
+
+        % \begin{align*}
+        %   \varphi = sen ^{-1} \left( \dfrac{t_{0} \cdot 180\ ^{\circ}}{0,5 \cdot T} \right) = sen ^{-1} \left( \dfrac{1,12~ms \cdot 180\ ^{\circ}}{10~ms} \right) \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{\varphi = 20,16\ ^{\circ}}\ .
+        % \end{align*}    
 
    
